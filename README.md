@@ -36,9 +36,9 @@ Want to contribute? Great! If you find a bug or want to make improvements, simpl
 Also - I'm looking for additional maintainers who are still actively using this in production as I now run a startup and am not actively working on Unity anymore
 
 ### Author
-@PimDeWitte 
-@ssootube (changes taken from https://github.com/ssootube/UnityMainThreadDispatcher from issue https://github.com/PimDeWitte/UnityMainThreadDispatcher/issues/22)
-@Tom7893 (fork only author)
+@PimDeWitte <br>
+@ssootube (changes taken from https://github.com/ssootube/UnityMainThreadDispatcher from issue https://github.com/PimDeWitte/UnityMainThreadDispatcher/issues/22) <br>
+@Tom7893 (fork only author) <br>
 
 
 
