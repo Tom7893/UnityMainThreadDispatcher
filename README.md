@@ -4,6 +4,7 @@ A thread-safe way of dispatching IEnumerator functions to the main thread in uni
 
 ### Version
 1.0 - Tested and functional in one or more production applications, including those from major companies. 
+1.1 - Fixed doubled instances
 
 ### Installation
 
@@ -35,8 +36,9 @@ Want to contribute? Great! If you find a bug or want to make improvements, simpl
 Also - I'm looking for additional maintainers who are still actively using this in production as I now run a startup and am not actively working on Unity anymore
 
 ### Author
-@PimDeWitte
-
+@PimDeWitte 
+@ssootube (changes taken from https://github.com/ssootube/UnityMainThreadDispatcher from issue https://github.com/PimDeWitte/UnityMainThreadDispatcher/issues/22)
+@Tom7893 (fork only author)
 
 
 
