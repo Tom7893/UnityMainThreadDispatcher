@@ -12,6 +12,10 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+MODIFIED by
+@Tom7893 based on changes of @ssootube from https://github.com/ssootube/UnityMainThreadDispatcher that is based on issue https://github.com/PimDeWitte/UnityMainThreadDispatcher/issues/22
+
 */
 
 using UnityEngine;
@@ -104,18 +108,25 @@ namespace PimDeWitte.UnityMainThreadDispatcher {
 			return _instance;
 		}
 
-
-		void Awake() {
-			if (_instance == null) {
-				_instance = this;
-				DontDestroyOnLoad(this.gameObject);
-			}
+		void Awake() 
+		{
+		    if (_instance == null)
+		    {
+		        _instance = this;
+		        DontDestroyOnLoad(this.gameObject);
+		    }
+		    else if (this != _instance) //Preserves only the first object created.
+		    {
+		        Destroy(this);
+		    }
 		}
-
-		void OnDestroy() {
-				_instance = null;
+		
+		void OnDestroy() 
+		{
+		    if (this == _instance) // If a duplicate object is destroyed, it does not free the first instance created.
+		    {
+			_instance = null;
+		    }
 		}
-
-
 	}
 }
